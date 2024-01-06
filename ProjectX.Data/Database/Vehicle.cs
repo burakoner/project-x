@@ -1,4 +1,5 @@
 ﻿using ProjectX.Data.Enums;
+using ProjectX.Data.Models.Requests;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjectX.Data.Database;

@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "dd09964c-80f1-4313-a4b3-1ae6da5dc5ab",
+		"name": "ProjectX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21040795"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"a@b.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/Operator/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"Operator",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operator Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"a@b.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/Operator/info?id=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"Operator",
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Müşteri Ekle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \" Adı\",\r\n    \"surname\": \" Soyadı\",\r\n    \"city\": \"Mersin\",\r\n    \"tckn\": \"85245\",\r\n    \"ehliyet\": 7,\r\n    \"notes\": \"Notlar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/clients/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"clients",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Müşteri Listesini Getir",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7249/clients/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"clients",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Müşteri Detaylarını Getir",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/clients/get?id=4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"clients",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Müşteri Güncelle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \" Adı\",\r\n    \"surname\": \" Soyadı\",\r\n    \"city\": \"Mersin\",\r\n    \"tckn\": \"85245\",\r\n    \"ehliyet\": 7,\r\n    \"notes\": \"Notlar 22222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/clients/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"clients",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Ekle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"marka\": \" Adı\",\r\n    \"model\": \" Soyadı\",\r\n    \"yakitTuru\": \"Mersin\",\r\n    \"yil\": \"85245\",\r\n    \"ehliyet\": 7,\r\n    \"note\": \"Notlar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/vehicles/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"vehicles",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Listesini Getir",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/vehicles/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"vehicles",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Detaylarını Getir",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/vehicles/get?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"vehicles",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Güncelle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"marka\": \"VW\",\r\n    \"model\": \"Passat\",\r\n    \"yakitTuru\": \"Benzin\",\r\n    \"yil\": \"2023\",\r\n    \"ehliyet\": 2,\r\n    \"note\": \"Güzel Araba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/vehicles/update?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"vehicles",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Kirala",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"VehicleId\": 1,\r\n    \"ClientId\": 3,\r\n    \"OperatorId\": 2,\r\n    \"GunSayisi\": 3,\r\n    \"GunlukKiraBedeli\": 1200,\r\n    \"YakitMiktari\": 0.5,\r\n    \"Notlar\": \"Ön tampon hasarlı teslim edildi.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/sale/rent",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"sale",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Kiralamalarını Listele",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"VehicleId\": 1,\r\n    \"ClientId\": 3,\r\n    \"OperatorId\": 2,\r\n    \"GunSayisi\": 3,\r\n    \"GunlukKiraBedeli\": 1200,\r\n    \"YakitMiktari\": 0.5,\r\n    \"Notlar\": \"Ön tampon hasarlı teslim edildi.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/sale/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"sale",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Araç Teslim Al",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SaleId\": 5,\r\n    \"Notlar\": \"Ön tampon hasarlı teslim edildi.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7249/sale/take",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7249",
+					"path": [
+						"sale",
+						"take"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
