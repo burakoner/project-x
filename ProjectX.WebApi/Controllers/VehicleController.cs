@@ -2,7 +2,6 @@
 using ProjectX.Data.Database;
 using ProjectX.Data.Models;
 using ProjectX.Data.Models.Requests;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace ProjectX.WebApi.Controllers

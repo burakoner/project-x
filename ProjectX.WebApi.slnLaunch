@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "ProjectX.WebApi\\ProjectX.WebApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "ProjectX.Desktop\\ProjectX.Desktop.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

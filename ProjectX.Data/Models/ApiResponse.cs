@@ -22,6 +22,13 @@ public class ApiResponse
     }
 }
 
+public class ApiResponse<T>
+{
+    public bool Success { get => Error == null; }
+    public ApiError Error { get; set; }
+    public T Data { get; set; }
+}
+
 public class ApiError
 {
     public int Code { get; set; }
