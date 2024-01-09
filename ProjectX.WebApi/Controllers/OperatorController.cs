@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjectX.Data.Database;
 using ProjectX.Data.Models;
 using ProjectX.Data.Models.Requests;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ProjectX.WebApi.Controllers
 {
@@ -25,7 +28,7 @@ namespace ProjectX.WebApi.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginRequest request)
+        public async Task<IActionResult> LoginAsync([FromBody] LoginRequest request)
         {
             if (string.IsNullOrEmpty(request.Email))
             {
@@ -61,7 +64,7 @@ namespace ProjectX.WebApi.Controllers
         }
 
         [HttpGet("info")]
-        public IActionResult GetOperator( int id)
+        public IActionResult GetOperator(int id)
         {
             var user = this.DbContext.Operators.Where(x => x.Id == id).FirstOrDefault();
             if (user == null)
@@ -70,6 +73,13 @@ namespace ProjectX.WebApi.Controllers
             }
 
             return this.Ok(new ApiResponse(user));
+        }
+
+        [HttpGet("all")]
+        public async Task< IActionResult> GetAllOperators()
+        {
+            var users =await this.DbContext.Operators.ToListAsync();
+            return this.Ok(new ApiResponse(users));
         }
     }
 }

@@ -60,6 +60,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new System.Drawing.Size(263, 23);
             txtEmail.TabIndex = 1;
+            txtEmail.Text = "a@b.com";
             // 
             // txtPassword
             // 
@@ -68,6 +69,7 @@
             txtPassword.PasswordChar = '●';
             txtPassword.Size = new System.Drawing.Size(263, 23);
             txtPassword.TabIndex = 2;
+            txtPassword.Text = "1234";
             // 
             // label3
             // 

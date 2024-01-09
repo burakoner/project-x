@@ -4,6 +4,7 @@ using ProjectX.Data.Models;
 using ProjectX.Data.Models.Requests;
 using RestSharp;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectX.Desktop
@@ -23,7 +24,7 @@ namespace ProjectX.Desktop
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             /* GET Örneği
             using var client = new RestClient("https://api.binance.com");
@@ -32,10 +33,8 @@ namespace ProjectX.Desktop
             var text = resp.Content;
             */
 
-
             var email = txtEmail.Text;
             var passw = txtPassword.Text;
-
 
             var loginRequest = new LoginRequest();
             loginRequest.Email = email;
@@ -46,7 +45,7 @@ namespace ProjectX.Desktop
             var request = new RestRequest("Operator/login");
             request.AddJsonBody(loginJson);
 
-            var response = client.Post(request);
+            var response = await client.PostAsync(request);
             var responseText = response.Content;
             var responseObject = JsonConvert.DeserializeObject<ApiResponse<Operator>>(responseText);
 

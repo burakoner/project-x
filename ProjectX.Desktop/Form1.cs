@@ -45,7 +45,7 @@ namespace ProjectX.Desktop
 
         private void satislariGosterToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            var form = new SalesForm();
+            var form = new SalesForm(this);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
